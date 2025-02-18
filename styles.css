@@ -1,106 +1,95 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<template>
+  <div class="parent">
+    <child-component class="child"></child-component>
+  </div>
+</template>
 
-.container{
-    border: 2px dashed red;
-    font-size: 1.5rem;
-    margin: 1.5rem 2em 3em 4em;
-    /*margin-top: 1.5em;
-    margin-right: 2em;
-    margin-botton: 2em;
-    margin-left: 2em; */
-    padding: 1.5em;
-    outline: 5px solid purple;
-    outline-offset: 5px;
-}
-
-.circle{
-    margin: 3rem auto;
-    background-color: gold;
-    width: 100px;
-    height: 100px;
-    border: 2px solid #000;
-    outline: 2px solid red;
-    outline-offset: 0.25rem;
-}
-
-/* Basic Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body Styling */
+<style scoped>
+/* Scoped styles */
+.parent {
+  padding: 20px;
+  background-color: lightblue;
+}/* General Styles */
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
+    margin: 0;
+    padding: 0;
     background-color: #f4f4f4;
     color: #333;
-    padding: 20px;
 }
 
-/* Header Styling */
+/* Header Styles */
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: #4CAF50;
+    color: white;
     padding: 20px 0;
     text-align: center;
 }
 
 header h1 {
-    margin-bottom: 10px;
+    margin: 0;
+}
+
+/* Navigation Styles */
+nav {
+    background-color: #333;
+    color: white;
+    padding: 10px;
 }
 
 nav ul {
-    list-style: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 15px;
+    margin: 0 15px;
 }
 
 nav ul li a {
-    color: #fff;
+    color: white;
     text-decoration: none;
+    font-weight: bold;
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    color: #4CAF50;
 }
 
-/* Main Content Styling */
+/* Main Content Styles */
 main {
-    margin: 20px 0;
+    padding: 20px;
+    background-color: white;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-section {
-    margin-bottom: 20px;
+main h2 {
+    color: #4CAF50;
 }
 
-section h2 {
-    color: #333;
-    margin-bottom: 10px;
-}
-
-section p, section ul {
-    margin-bottom: 10px;
-}
-
-section ul {
-    list-style-type: square;
-    margin-left: 20px;
-}
-
-/* Footer Styling */
+/* Footer Styles */
 footer {
-    text-align: center;
-    margin-top: 20px;
-    padding: 10px 0;
     background-color: #333;
-    color: #fff;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
+
+footer p {
+    margin: 0;
+}
+
+/* Use :deep() to style elements inside child components */
+.parent :deep(.child) {
+  color: red;
+  font-size: 18px;
+}
+</style>
