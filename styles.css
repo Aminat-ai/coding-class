@@ -1,95 +1,189 @@
-<template>
-  <div class="parent">
-    <child-component class="child"></child-component>
-  </div>
-</template>
-
-<style scoped>
-/* Scoped styles */
-.parent {
-  padding: 20px;
-  background-color: lightblue;
-}/* General Styles */
-body {
-    font-family: Arial, sans-serif;
+/* General Reset */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
 }
 
-/* Header Styles */
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
 header {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #333;
+    color: #fff;
     padding: 20px 0;
     text-align: center;
 }
 
 header h1 {
-    margin: 0;
+    margin-bottom: 10px;
+    font-size: 2.5em;
 }
 
-/* Navigation Styles */
+header p {
+    font-size: 1.2em;
+}
+
+/* Navigation */
 nav {
-    background-color: #333;
-    color: white;
-    padding: 10px;
+    background-color: #444;
+    padding: 10px 0;
 }
 
 nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
+    list-style: none;
+    text-align: center;
 }
 
 nav ul li {
+    display: inline;
     margin: 0 15px;
 }
 
 nav ul li a {
-    color: white;
+    color: #fff;
     text-decoration: none;
-    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #4CAF50;
+    color: #f4f4f4;
+    text-decoration: underline;
 }
 
-/* Main Content Styles */
+/* Main Content */
 main {
-    padding: 20px;
-    background-color: white;
-    margin: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
 }
 
-main h2 {
-    color: #4CAF50;
+section {
+    margin-bottom: 40px;
 }
 
-/* Footer Styles */
+section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+section p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Footer */
 footer {
     background-color: #333;
-    color: white;
+    color: #fff;
     text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    padding: 20px 0;
+    margin-top: 40px;
 }
 
 footer p {
     margin: 0;
+    font-size: 1em;
 }
 
-/* Use :deep() to style elements inside child components */
-.parent :deep(.child) {
-  color: red;
-  font-size: 18px;
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    section h2 {
+        font-size: 1.5em;
+    }
+
+    section p {
+        font-size: 1em;
+    }
 }
-</style>
+
+/* Buttons */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #555;
+}
+
+/* Cards */
+.card {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.card p {
+    font-size: 1em;
+    color: #555;
+}
+
+/* Grid Layout */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Utility Classes */
+.text-center {
+    text-align: center;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.pt-20 {
+    padding-top: 20px;
+}
+
+.pb-20 {
+    padding-bottom: 20px;
+}
